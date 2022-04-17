@@ -3,6 +3,13 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
 
+	palette: {
+		text: {
+			primary: "#222222",
+			secondary: "#737373",
+			disabled: "#6f8ba4"
+		}
+	},
 	shape: {
 		default: 10,
 		rounded: 15
@@ -12,15 +19,25 @@ export const theme = createTheme({
 		fontFamily: "'Fira Sans', sans-serif",
 		h1: {
 			fontFamily: "''Fira Sans', sans-serif",
+			fontWeight: 700,
+			fontSize: "32px",
+			lineHeight: "37px"
 		},
 		h2: {
 			fontFamily: "''Fira Sans', sans-serif",
+			fontWeight: 600,
+			fontSize: "29px",
+			lineHeight: "32px"
 		},
 		h3: {
 			fontFamily: "''Fira Sans', sans-serif",
+			fontWeight: 500,
+			fontSize: "24px",
+			lineHeight: "29px"
 		},
 		h4: {
 			fontFamily: "''Fira Sans', sans-serif",
+
 		},
 		h5: {
 			fontFamily: "''Fira Sans', sans-serif",
