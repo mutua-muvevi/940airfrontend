@@ -14,7 +14,8 @@ const navbarSX = {
 }
 
 const styledLogo = {
-	width: "120px"
+	width: "120px",
+	marginLeft: 0
 }
 
 const navLinkStyles = {
