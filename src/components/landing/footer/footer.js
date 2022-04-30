@@ -55,7 +55,7 @@ const Footer = () => {
 							<List>
 								{
 									footerContent.middle.links.map((p, i) => (
-										<ListItem disablePadding>
+										<ListItem key={i} disablePadding>
 											<ListItemButton>
 												<DoubleArrowIcon/>
 												<StyledListItemText primary={p.text} />
@@ -75,7 +75,7 @@ const Footer = () => {
 							<List>
 								{
 									footerContent.right.contactItems.map((p, i) => (
-										<ListItem disablePadding>
+										<ListItem key={i} disablePadding>
 											<ListItemButton>
 												<DoubleArrowIcon/>
 												<StyledListItemText primary={p.text} />
@@ -100,7 +100,7 @@ const Footer = () => {
 						<Box>
 							{
 								footerSocialIcons.map((el, i) => (
-									<Link target="_blank" rel="noopener" href={el.link}>
+									<Link key={i} target="_blank" rel="noopener" href={el.link}>
 										{el.icon}
 									</Link>
 								))

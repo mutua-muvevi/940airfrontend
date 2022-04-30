@@ -1,16 +1,38 @@
-import { AppBar, Box, Button, ButtonGroup, Container, Tab, Tabs, Toolbar, Typography } from "@mui/material"
-import { styled } from "@mui/styles";
+import { 
+	AppBar, 
+	Button, 
+	ButtonGroup, 
+	Container, 
+	IconButton, 
+	List, 
+	ListItemText, 
+	ListItemButton, 
+	ListItemIcon, 
+	Toolbar 
+} from "@mui/material";
+
 import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { navbarContent } from "./navbarcontent";
-import Logo from "../../../assets/images/logos/940 air cargo logo.png"
 
+import StyledSwipeAbleDrawer from "./swipeablesidedrawer"
+import Logo from "../../../assets/images/logos/940 air cargo logo.png";
+
+import LockIcon from '@mui/icons-material/Lock';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 
 const navbarSX = {
 	backgroundColor: "white",
 	color: "primary",
+}
+
+const toolbarSX = {
+	display: "flex",
+	justifyContent: "space-between",
+	alignItems: "center"
 }
 
 const styledLogo = {
@@ -32,16 +54,30 @@ const navItemsSX = {
 	},
 	alignItems: "center",
 	textAlign: "center !important",
-	justifyContent: "end",
+	justifyContent: "center",
 }
 
-const tabStyle = {
-	marginRight: "0 !important"
+const buttonGroupSX = {
+	display: { 
+		xs: 'none',
+		md: 'flex'
+	}
+}
+
+const iconButtonSX = {
+	display: { 
+		xs: 'flex',
+		md: 'none',
+	}
 }
 
 const Navbar = () => {
 
-	const [navValue, setNavValue]= useState(0)
+	const [mobileNav, setMobileNav] = useState(false);
+
+	const handleMobileNav = () => {
+		setMobileNav(!mobileNav)
+	}
 
 	return (
 		<AppBar
@@ -50,26 +86,45 @@ const Navbar = () => {
 			sx={navbarSX}
 		>
 			<Container maxWidth="lg">
-				<Toolbar>
+				<Toolbar sx={toolbarSX}>
 						<img style={styledLogo} src={Logo} alt="940 ontrack logo"/>
 						
-						<Tabs sx={navItemsSX} centered >
+						<List sx={navItemsSX}>
 							{
 								navbarContent.navItems.map((el, i) => (
 									<NavLink key={i} to={el.path} style={navLinkStyles}>
-										<Tab icon={el.icon} iconPosition="start" label={el.text} sx={tabStyle}/>
+										<ListItemButton>
+											<ListItemIcon>
+												{el.icon}
+											</ListItemIcon>
+											<ListItemText primary={el.text} />
+										</ListItemButton>
 									</NavLink>
 								))
 							}
-						</Tabs>
+						</List>
 						
-						<ButtonGroup variant="contained">
-							<Button color="primary">Login</Button>
-							<Button color="secondary">Signup</Button>
+						<ButtonGroup variant="contained" sx={buttonGroupSX}>
+							<Button color="primary" startIcon={<LockIcon/>} >Login</Button>
+							<Button color="secondary" startIcon={<HowToRegIcon/>} >Signup</Button>
 						</ButtonGroup>
+
+						<IconButton
+							size="large"
+							aria-label="account of current user"
+							aria-controls="menu-appbar"
+							aria-haspopup="true"
+							sx={iconButtonSX}
+							onClick={handleMobileNav}
+						>
+							{console.log(mobileNav)}
+							<MenuIcon/>
+						</IconButton>
 
 				</Toolbar>
 			</Container>
+
+			<StyledSwipeAbleDrawer mobileNav={mobileNav} setMobileNav={setMobileNav}/>
 		</AppBar>
 	)
 }
