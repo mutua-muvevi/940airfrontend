@@ -11,10 +11,13 @@ export const theme = createTheme({
 		}
 	},
 	shape: {
-		default: 10,
-		rounded: 15
+		default: 5,
+		rounded: 10
 	},
-    
+    background: {
+		paper: "#edf5ff",
+		default: "#edf5ff"
+	},
 	typography: {
 		fontFamily: "'Fira Sans', sans-serif",
 		h1: {

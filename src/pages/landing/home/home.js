@@ -1,8 +1,19 @@
 import React from 'react'
+import Subscribe from "../../../components/subscribe"
+import Banner from "./banner/banner"
+import HomeAbout from "./homeabout/homeabout"
+import HomeFeatures from "./homefeatures/homefeatures"
+import Testimonials from "./testimonials/testimonials"
 
 const Home = () => {
 	return (
-		<div>Home</div>
+		<>
+			<Banner/>
+			<HomeAbout/>
+			<HomeFeatures/>
+			<Testimonials/>
+			<Subscribe/>
+		</>
 	)
 }
 
