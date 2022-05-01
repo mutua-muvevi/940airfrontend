@@ -108,7 +108,7 @@ const Footer = () => {
 				<Container>
 					<StyledCopyrightItems>
 						<Typography variant="body1">
-							Copyright 2022
+							Copyright {moment().format("YYYY")}
 						</Typography>
 						<Box>
 							{

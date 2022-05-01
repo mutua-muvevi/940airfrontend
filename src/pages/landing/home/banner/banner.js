@@ -6,6 +6,7 @@ import AddIcon from '@mui/icons-material/Add';
 
 import { Link } from "react-router-dom";
 import ShapeOne from "../shapeone";
+import BannerForm from "./bannerform";
 
 const StyledBannerWrapper = styled(Box)(({theme}) => ({
 	marginTop: "20px",
@@ -49,11 +50,11 @@ const StyledPaper = styled(Paper)(({theme}) => ({
 	padding: "20px"
 }))
 
-const bgshapeOne ={
-	position: "absolute",
-	left: "20px",
-	zIndex: -2
-}
+// const bgshapeOne ={
+// 	position: "absolute",
+// 	left: "20px",
+// 	zIndex: -2
+// }
 
 const Banner = () => {
 	return (
@@ -81,7 +82,7 @@ const Banner = () => {
 					<StyledRighttContentWrapper item lg={5} sm={12}>
 						<StyledPaper elevation={2}>
 							<Box>
-								FORM HERE
+								<BannerForm/>
 							</Box>
 						</StyledPaper>
 					</StyledRighttContentWrapper>
