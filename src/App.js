@@ -12,10 +12,10 @@ const App = () => {
 			<Router>
 				<ThemeProvider theme={theme}>
 					<Routes>
-						<Route path="/landing" element={<LandingUI/>}>
-							<Route path="/landing/home" element={<Home/>}/>
-							<Route path="/landing/about" element={<About/>}/>
-							<Route path="/landing/contact" element={<Contact/>}/>
+						<Route path="/" element={<LandingUI/>}>
+							<Route path="/home" element={<Home/>}/>
+							<Route path="/about" element={<About/>}/>
+							<Route path="/contact" element={<Contact/>}/>
 						</Route>
 					</Routes>
 				</ThemeProvider>

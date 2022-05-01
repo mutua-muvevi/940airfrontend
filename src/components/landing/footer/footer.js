@@ -5,6 +5,11 @@ import React from 'react';
 import moment from "moment"
 import { footerContent, footerSocialIcons } from "./footercontent";
 
+const StyledTopContainer = styled(Box)(({ theme }) => ({
+	backgroundColor: theme.palette.primary.dark,
+	padding: "50px 0px"
+}))
+
 const StyledCopyRight = styled(Box)(({theme}) => ({
 	backgroundColor: "black",
 	color: "white"
@@ -15,6 +20,14 @@ const StyledCopyrightItems = styled(Toolbar)(({theme}) => ({
 	justifyContent: "space-between"
 }))
 
+const StyledGrid = styled(Grid)(({ theme }) => ({
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "start",
+	justifyContent: "flex-start",
+	minHeight: "40vh"
+}))
+
 const StyledListItemText = styled(ListItemText)(({theme}) => ({
 	marginLeft: "5px",
 	textTransform: "capitalize"
@@ -23,11 +36,11 @@ const StyledListItemText = styled(ListItemText)(({theme}) => ({
 const Footer = () => {
 	return (
 		<Box component="footer">
-			<Box>
+			<StyledTopContainer>
 				<Container>
 					<Grid container>
-						<Grid item lg={4} sm={12} xs={12}>
-							<Typography variant="h3" gutterBottom>
+						<StyledGrid item lg={4} sm={12} xs={12}>
+							<Typography variant="h3" style={{ marginBottom: "30px", }}>
 								{footerContent.left.title}
 							</Typography>
 							{
@@ -37,17 +50,17 @@ const Footer = () => {
 									</Typography>
 								))
 							}
-							<Button variant="contained">
+							<Button variant="contained" sx={{ marginTop: "30px" }}>
 								{footerContent.left.button.text}
 							</Button>
-						</Grid>
+						</StyledGrid>
 
-						<Grid item lg={4} sm={12} xs={12}>
-							<Typography variant="h3" gutterBottom>
+						<StyledGrid item lg={4} sm={12} xs={12}>
+							<Typography variant="h3" style={{ marginBottom: "30px", }}>
 								{footerContent.middle.title}
 							</Typography>
 
-							<Typography variant="body1" gutterBottom>
+							<Typography variant="body1" style={{ marginBottom: "30px", }}>
 								{ footerContent.middle.paragraph }
 							</Typography>
 
@@ -65,10 +78,10 @@ const Footer = () => {
 								}
 							</List>
 
-						</Grid>
+						</StyledGrid>
 
-						<Grid item lg={4} sm={12} xs={12}>
-							<Typography variant="h3" gutterBottom>
+						<StyledGrid item lg={4} sm={12} xs={12}>
+							<Typography variant="h3" style={{ marginBottom: "30px", }}>
 								{footerContent.right.title}
 							</Typography>
 
@@ -86,16 +99,16 @@ const Footer = () => {
 							</List>
 
 							
-						</Grid>
+						</StyledGrid>
 					</Grid>
 				</Container>
-			</Box>
+			</StyledTopContainer>
 
 			<StyledCopyRight>
 				<Container>
 					<StyledCopyrightItems>
 						<Typography variant="body1">
-							Copyright 2022
+							Copyright {moment().format("YYYY")}
 						</Typography>
 						<Box>
 							{

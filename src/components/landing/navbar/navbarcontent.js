@@ -13,19 +13,19 @@ export const navbarContent = {
 	navItems: [
 		{
 			text: "home",
-			path: "/landing/home",
+			path: "/home",
 			icon: <HomeIcon color="primary"/>,
 			index: 0
 		},
 		{
 			text: "about",
-			path: "/landing/about",
+			path: "/about",
 			icon: <InfoIcon color="primary"/>,
 			index: 1
 		},
 		{
 			text: "contact",
-			path: "/landing/contact",
+			path: "/contact",
 			icon: <ContactSupportIcon color="primary"/>,
 			index: 2
 		},
@@ -33,13 +33,13 @@ export const navbarContent = {
 	navActionItems : [
 		{
 			text: "login",
-			path: "/landing/home",
+			path: "/home",
 			icon: <LockIcon color="primary"/>,
 			index: 3
 		},
 		{
 			text: "signup",
-			path: "/landing/home",
+			path: "/home",
 			icon: <HowToRegIcon color="primary"/>,
 			index: 4
 		},
