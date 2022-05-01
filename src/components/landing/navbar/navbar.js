@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 
 import React, { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { navbarContent } from "./navbarcontent";
 
 import StyledSwipeAbleDrawer from "./swipeablesidedrawer"
@@ -105,8 +105,13 @@ const Navbar = () => {
 						</List>
 						
 						<ButtonGroup variant="contained" sx={buttonGroupSX}>
-							<Button color="primary" startIcon={<LockIcon/>} >Login</Button>
-							<Button color="secondary" startIcon={<HowToRegIcon/>} >Signup</Button>
+							<Link to="/auth/login" style={{textDecoration: "none", color: "white"}}>
+								<Button color="primary" startIcon={<LockIcon/>} >Login</Button>
+							</Link>
+							
+							<Link to="/auth/register" style={{textDecoration: "none", color: "white"}}>
+								<Button color="secondary" startIcon={<HowToRegIcon/>} >Signup</Button>
+							</Link>
 						</ButtonGroup>
 
 						<IconButton
