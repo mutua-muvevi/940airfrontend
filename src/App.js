@@ -7,6 +7,21 @@ import Contact from "./pages/landing/contact/contact";
 import Home from "./pages/landing/home/home";
 import { ThemeProvider } from "@mui/material/styles";
 
+import AuthLayout from "./layout/ui/auth/authui";
+import Register from "./pages/auth/register/register";
+import Login from "./pages/auth/login/login";
+import ForgotPassword from "./pages/auth/forgotpassword/forgotpassword";
+import ResetPassword from "./pages/auth/resetpassword/resetpassword";
+
+
+import SenderUI from './layout/ui/sender/senderui';
+import SenderHome from './pages/dashboard/sender/home/senderhome';
+import Tracking from './pages/dashboard/sender/tracking/tracking';
+import Order from './pages/dashboard/sender/order/order';
+import Analitics from './pages/dashboard/sender/analitics/analitics';
+import Profile from './pages/dashboard/sender/profile/profile';
+
+
 const App = () => {
 		return (
 			<Router>
@@ -16,6 +31,21 @@ const App = () => {
 							<Route path="/home" element={<Home/>}/>
 							<Route path="/about" element={<About/>}/>
 							<Route path="/contact" element={<Contact/>}/>
+						</Route>
+
+						<Route path="/auth" element={<AuthLayout/>}>
+							<Route path="/auth/register" element={<Register/>}/>
+							<Route path="/auth/login" element={<Login/>}/>
+							<Route path="/auth/forgotpassword" element={<ForgotPassword/>}/>
+							<Route path="/auth/resetpassword" element={<ResetPassword/>}/>
+						</Route>
+
+						<Route path="/sender" element={<SenderUI/>}>
+							<Route path="/sender/home" element={<SenderHome/>}/>
+							<Route path="/sender/tracking" element={<Tracking/>}/>
+							<Route path="/sender/analitics" element={<Analitics/>}/>
+							<Route path="/sender/order" element={<Order/>}/>
+							<Route path="/sender/profile" element={<Profile/>}/>
 						</Route>
 					</Routes>
 				</ThemeProvider>
