@@ -21,19 +21,19 @@ export const theme = createTheme({
 	typography: {
 		fontFamily: "'Fira Sans', sans-serif",
 		h1: {
-			fontFamily: "''Fira Sans', sans-serif",
+			fontFamily: "'Fira Sans', sans-serif",
 			fontWeight: 700,
 			fontSize: "32px",
 			lineHeight: "37px"
 		},
 		h2: {
-			fontFamily: "''Fira Sans', sans-serif",
+			fontFamily: "'Fira Sans', sans-serif",
 			fontWeight: 600,
 			fontSize: "29px",
 			lineHeight: "32px"
 		},
 		h3: {
-			fontFamily: "''Fira Sans', sans-serif",
+			fontFamily: "'Fira Sans', sans-serif",
 			fontWeight: 500,
 			fontSize: "24px",
 			lineHeight: "29px"
@@ -43,10 +43,10 @@ export const theme = createTheme({
 
 		},
 		h5: {
-			fontFamily: "''Fira Sans', sans-serif",
+			fontFamily: "'Fira Sans', sans-serif",
 		},
 		h6: {
-			fontFamily: "''Fira Sans', sans-serif",
+			fontFamily: "'Fira Sans', sans-serif",
 		},
 		subtitle1: {
 			fontFamily: "'Fira Sans', sans-serif",
