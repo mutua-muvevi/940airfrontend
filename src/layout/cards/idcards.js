@@ -10,7 +10,7 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 
 import { Box, Button, Card, CardContent, Toolbar, Typography } from '@mui/material';
 import { styled } from "@mui/system";
-import RouteModal from '../modal/routemodal';
+import RouteModal from '../modal/routemodal/routemodal';
 
 const StyledCard = styled(Card)(({ theme }) => ({
 	height: "27vh",
