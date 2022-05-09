@@ -1,12 +1,15 @@
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
+
+import Cardtable from "./cardtable"
+import FullTable from "./fulltable"
 import VehicleCards from "./vehiclecards"
 
 const SenderHome = () => {
 	return(
 		<Box>
 			<VehicleCards/>
-			<Typography variant="body1">one card 4, one dashboard 8</Typography>
-			<Typography variant="body1">full ssze table</Typography>
+			<Cardtable/>
+			<FullTable/>
 		</Box>
 	)
 }

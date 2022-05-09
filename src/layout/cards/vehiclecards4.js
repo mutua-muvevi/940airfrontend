@@ -8,7 +8,7 @@ import StarIcon from '@mui/icons-material/Star';
 const StyledVehicleCardsContainer = styled(Box)(({ theme }) => ({
 	backgroundColor: "#fff",
 	height: "35vh",
-	borderRadius: theme.shape.default
+	borderRadius: theme.shape.default,
 }))
 
 const StyledContainerTop = styled(Box)(({ theme }) => ({
@@ -66,7 +66,7 @@ const StyledContainerFooter = styled(Box)(({ theme }) => ({
 
 const VehicleCards4 = ({item}) => {
 	return (
-		<StyledVehicleCardsContainer>
+		<StyledVehicleCardsContainer  sx={{ boxShadow: 5}}>
 			<StyledContainerTop maxWidth="xl">
 				<StyledImageContainer>
 					<img 

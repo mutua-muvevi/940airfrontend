@@ -1,14 +1,18 @@
 import React from 'react';
 
+import { Box, Grid } from "@mui/material";
+import { styled } from "@mui/system"
+
 import VehicleCards4 from "../../../../layout/cards/vehiclecards4";
 import { vehicleCards } from "./vehiclecardsinfo";
 
-import { Box, Grid } from "@mui/material";
-
+const StyledCardsContainer = styled(Box)(({ theme }) => ({
+	marginBottom: "10px"
+}))
 
 const VehicleCards = () => {
 	return (
-		<Box>
+		<StyledCardsContainer>
 			<Grid container spacing={2}>
 				{
 					vehicleCards.map((card, i) => (
@@ -18,7 +22,7 @@ const VehicleCards = () => {
 					))
 				}
 			</Grid>
-		</Box>
+		</StyledCardsContainer>
 	)
 }
 
