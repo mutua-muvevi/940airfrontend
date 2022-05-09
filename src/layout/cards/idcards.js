@@ -13,7 +13,7 @@ import { styled } from "@mui/system";
 import RouteModal from '../modal/routemodal';
 
 const StyledCard = styled(Card)(({ theme }) => ({
-	height: "23vh",
+	height: "27vh",
 	marginBottom: "15px",
 	marginRight: "15px",
 }))
@@ -27,21 +27,16 @@ const styledBoxTop = {
 	alignItems: "flex-start"
 }
 
-const styledIdText = {
-	fontSize: "30px",
-}
 
 
 const styledDetailsText = {
-	fontSize: "30px",
-	lineHeight: "0px",
-	color: "grey"
+	color: "grey",
+	lineHeight: "0px"
 }
 
 const styledActionBox = {
 	color: "white",
 	borderRadius: "5px",
-	padding: "10px",
 	minWidth: "100px",
 	display: "flex",
 	justifyContent: "center"
@@ -51,6 +46,7 @@ const StyledTimelineContainer = styled(Box)(({ theme }) => ({
 	padding: "0px",
 	margin: "0px",
 	width: "100%",
+	height: "13vh"
 
 }))
 
@@ -78,7 +74,7 @@ const IdCards = () => {
 		<StyledCard>
 			<CardContent>
 				<Toolbar  sx={styledBoxTop}>
-					<Typography variant="h3" style={styledIdText} >
+					<Typography variant="h3" >
 						ID: 234234253
 					</Typography>
 					<Button variant="contained" type="button" sx={styledActionBox} onClick={handleModal}>
@@ -97,7 +93,7 @@ const IdCards = () => {
 							</TimelineOppositeContent>
 							<TimelineSeparator>
 								<TimelineDot color="primary" variant="outlined" />
-								<TimelineConnector style={{padding: "0px", marginTop: "-10px",  marginBottom: "-10px"}} />
+								<TimelineConnector style={{height: "10px !important"}} />
 							</TimelineSeparator>
 							<TimelineContent>Departing from area A</TimelineContent>
 						</TimelineItem>
