@@ -1,7 +1,7 @@
-import Truck from "../../../../assets/images/truck.jpg";
-import Van from "../../../../assets/images/van.jpg";
-import MiniTruck from "../../../../assets/images/minitruck.jpg";
-import Pickup from "../../../../assets/images/pickup.jpg";
+import Truck from "../../../../assets/images/truck.png";
+import Van from "../../../../assets/images/van.png";
+import MiniTruck from "../../../../assets/images/minitruck.png";
+import Pickup from "../../../../assets/images/pickup.png";
 
 import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';

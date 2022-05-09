@@ -37,7 +37,9 @@ const TableCard = () => {
 			</StyledCardTop>
 			<Divider/>
 			<StyledCardBottom>
-
+				<Typography variant="body1">
+					Table body
+				</Typography>
 			</StyledCardBottom>
 		</StyledCardWrapper>
 	)

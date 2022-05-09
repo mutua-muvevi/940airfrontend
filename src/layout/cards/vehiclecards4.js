@@ -23,18 +23,18 @@ const StyledContainerTop = styled(Box)(({ theme }) => ({
 }))
 
 const StyledImageContainer = styled(Box)(({ theme }) => ({
-	width: "150px",
-	height: "140px",
-	borderRadius: "50%",
+	width: "180px",
+	minHeight: "100px",
+	borderRadius: theme.shape.default,
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	backgroundColor: "grey"
+	backgroundColor: "grey",
+	marginBottom: "10px"
 }))
 
 const imageStyle = {
-	width: "130px",
-	height: "100px",
+	width: "150px",
 }
 
 const headerStyle = {

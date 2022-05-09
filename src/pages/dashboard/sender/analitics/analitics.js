@@ -1,11 +1,11 @@
-import { Box, Grid, Card } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import React from 'react';
 import DashCard4 from '../../../../layout/cards/dashcard4';
+import TableCard from "../../../../layout/cards/tablecard";
 import { analiticsInfo } from './analiticsinfo';
 
-const StyledCard = styled(Card)(({ theme }) => ({
-	padding: "10px",
+const StyledCard = styled(Box)(({ theme }) => ({
 	minHeight: "30vh",
 	margin: "30px 0px"
 }))
@@ -25,7 +25,7 @@ const Analitics = () => {
 					{
 						[1,2,3,4].map((el) => (
 							<StyledCard>
-								This is were the table will be displayed
+								<TableCard style={{height: "100%"}}/>
 							</StyledCard>
 						))
 					}
