@@ -7,9 +7,9 @@ import RouteModalBody from './routemodalbody';
 
 const styleModal = {
 	position: 'absolute',
-	top: "10vh",
+	top: "5vh",
 	width: "80vw",
-	height: "80vh",
+	height: "90vh",
 	margin: "auto 10vw",
 	bgcolor: '#fff',
 	borderRadius: "10px",
@@ -20,7 +20,8 @@ const StyledContainer = styled(Container)(({ theme }) => ({
 	display: "flex",
 	justifyContent: "space-between",
 	alignItems: "center",
-	minHeight: "70px"
+	paddingTop: "10px",
+	paddingBottom: "10px",
 }))
 
 const RouteModal = ({modal, setModal}) => {
@@ -32,7 +33,7 @@ const RouteModal = ({modal, setModal}) => {
 	>
 		<Box sx={styleModal}>
 			<StyledContainer maxWidth="xl">
-				<Typography variant="h2">
+				<Typography variant="h3">
 					Route Details
 				</Typography>
 				<Button variant="outlined" color="primary">

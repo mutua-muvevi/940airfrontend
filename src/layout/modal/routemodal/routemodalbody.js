@@ -1,8 +1,11 @@
-import { Box, Grid } from '@mui/material'
-import { styled } from '@mui/system';
 import React from 'react';
-import Map from '../../components/map';
+
+import { Box, Grid } from '@mui/material';
+import { styled } from '@mui/system';
+
+import RouteMap from "./routemap";
 import RouteModalVehicle from './routemodalvehicle';
+import VehicleInfo from "./vehicleInfo";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
 	width: "100%",
@@ -11,7 +14,7 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
 
 
 const StyledTruckMap = styled(Box)(({ theme }) => ({
-	height: "20vh"
+	height: "40vh"
 }))
 
 const RouteModalBody = () => {
@@ -20,11 +23,11 @@ const RouteModalBody = () => {
 			<StyledGrid item xl={6} lg={6} md={6} sm={12} xs={12}>
 				<RouteModalVehicle/>
 				<StyledTruckMap>
-					<Map/>
+					<RouteMap/>
 				</StyledTruckMap>
 			</StyledGrid>
 			<Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
-				personal info
+				<VehicleInfo/>
 			</Grid>
 		</Grid>
 	)
