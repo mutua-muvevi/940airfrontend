@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Box, Button, Container, Divider, Modal, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+
 import RouteModalBody from './routemodalbody';
+import FormModal6 from "../formmodaL6/formmodal6";
 
 
 const styleModal = {
@@ -12,9 +14,9 @@ const styleModal = {
 	height: "90vh",
 	margin: "auto 10vw",
 	bgcolor: '#fff',
-	borderRadius: "10px",
+	borderRadius: "5px",
 	boxShadow: 24,
-  };
+};
 
 const StyledContainer = styled(Container)(({ theme }) => ({
 	display: "flex",
@@ -26,27 +28,36 @@ const StyledContainer = styled(Container)(({ theme }) => ({
 
 const RouteModal = ({modal, setModal}) => {
 
-  return (
-	  <Modal
-		open={modal}
-		onClose={() => setModal(false)}
-	>
-		<Box sx={styleModal}>
-			<StyledContainer maxWidth="xl">
-				<Typography variant="h3">
-					Route Details
-				</Typography>
-				<Button variant="outlined" color="primary">
-					Request now
-				</Button>
-			</StyledContainer>
-			<Divider/>
-			<Box>
-				<RouteModalBody/>
-			</Box>
-		</Box>
-	</Modal>
-  )
+	const [open, setOpen] = useState(false)
+
+	const handleModal = () => {
+		setOpen(!open)
+	}
+
+	return (
+		<>
+			<Modal
+				open={modal}
+				onClose={() => setModal(false)}
+			>
+				<Box sx={styleModal}>
+					<StyledContainer maxWidth="xl">
+						<Typography variant="h3">
+							Route Details
+						</Typography>
+						<Button variant="outlined" color="primary" onClick={handleModal}>
+							Request now
+						</Button>
+					</StyledContainer>
+					<Divider/>
+					<Box>
+						<RouteModalBody/>
+					</Box>
+				</Box>
+			</Modal>
+			<FormModal6 open={open} setOpen={setOpen} />
+		</>
+	)
 }
 
 export default RouteModal
