@@ -37,7 +37,7 @@ const VehicleInfo = () => {
 					Truck name
 				</Typography>
 				<Typography variant="h4">
-					Plate: KAZ #$L
+					Plate: ZZZ 000Z
 				</Typography>
 			</StyledPlateWrapper>
 			<VehicleCarousel/>
