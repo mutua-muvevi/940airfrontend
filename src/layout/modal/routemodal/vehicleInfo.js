@@ -9,7 +9,7 @@ import StarIcon from '@mui/icons-material/Star';
 import TableComponent from "../../table/table";
 import VehicleCarousel from "./vehiclecarousel";
 import { vehicleGridSegment, vehicleTable } from "./vehicleinfocontent";
-
+import Owner from "../../../assets/images/african man.jpg"
 
 
 const StyledContainerWrapper = styled(Container)(({ theme }) => ({
@@ -37,13 +37,6 @@ const StyledVehicleTableContainer = styled(Box)(({ theme }) => ({
 	margin: "10px auto",
 }))
 
-const StyledRating = styled(Box)(({ theme }) => ({
-	width: "40%",
-	marginTop: "10px",
-	display: "flex",
-	flexDirection: "column"
-}))
-
 const StyledGridItemSegment = styled(Grid)(({ theme }) => ({
 	marginTop: "10px",
 	marginBottom: "10px",
@@ -54,6 +47,30 @@ const StyledGridItemSegmentValue = styled(Box)(({ theme }) => ({
 	justifyContent: "left",
 	alignItems: "center",
 	textAlign: "left"
+}))
+
+const StyledOwnerSection = styled(Box)(({ theme }) => ({
+	textAlign: "left"
+}))
+
+const StyledOwnerSectionDetails = styled(Box)(({ theme }) => ({
+	display: "flex",
+	justifyContent: "left",
+	alignItems: "center",
+	textAlign: "left",
+	margin: "10px auto"
+}))
+
+const ownersImage = {
+	width: "50px",
+	borderRadius: "10px"
+}
+
+const StyledRating = styled(Box)(({ theme }) => ({
+	width: "40%",
+	marginTop: "10px",
+	display: "flex",
+	flexDirection: "column"
 }))
 
 const VehicleInfo = () => {
@@ -108,7 +125,21 @@ const VehicleInfo = () => {
 				</Typography>
 				<TableComponent table={vehicleTable}/>
 			</StyledVehicleTableContainer>
-
+			<StyledOwnerSection>
+				<Typography variant="h4" gutterBottom>
+					Vehicle Owner
+				</Typography>
+				<StyledOwnerSectionDetails>
+					<img
+						style={ownersImage}
+						src={Owner}
+						alt="The owner of the vehicle"
+						/>
+					<Typography style={{marginLeft: "20px"}} variant="body1">
+						Firstname Nomeclature
+					</Typography>
+				</StyledOwnerSectionDetails>
+			</StyledOwnerSection>
 			<StyledRating>
 				<Typography variant="h4">
 					Ratings

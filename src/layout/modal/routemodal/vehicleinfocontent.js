@@ -1,3 +1,4 @@
+import { GiCarWheel } from "react-icons/gi"
 
 export const vehicleGridSegment = [
 	{
@@ -5,7 +6,7 @@ export const vehicleGridSegment = [
 		value: 500,
 		unit: "km",
 		icons: [
-
+			
 		],
 	},
 	{
@@ -13,7 +14,12 @@ export const vehicleGridSegment = [
 		value: 6,
 		unit: "",
 		icons: [
-
+			<GiCarWheel/>,
+			<GiCarWheel/>,
+			<GiCarWheel/>,
+			<GiCarWheel/>,
+			<GiCarWheel/>,
+			<GiCarWheel/>,
 		],
 	},
 	{
