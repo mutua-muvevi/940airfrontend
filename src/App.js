@@ -40,12 +40,12 @@ const App = () => {
 							<Route path="/auth/resetpassword" element={<ResetPassword/>}/>
 						</Route>
 
-						<Route path="/sender" element={<SenderUI/>}>
-							<Route path="/sender/home" element={<SenderHome/>}/>
-							<Route path="/sender/tracking" element={<Tracking/>}/>
-							<Route path="/sender/analitics" element={<Analitics/>}/>
-							<Route path="/sender/order" element={<Order/>}/>
-							<Route path="/sender/profile" element={<Profile/>}/>
+						<Route path="/admin/sender" element={<SenderUI/>}>
+							<Route path="/admin/sender/home" element={<SenderHome/>}/>
+							<Route path="/admin/sender/tracking" element={<Tracking/>}/>
+							<Route path="/admin/sender/analitics" element={<Analitics/>}/>
+							<Route path="/admin/sender/order" element={<Order/>}/>
+							<Route path="/admin/sender/profile" element={<Profile/>}/>
 						</Route>
 					</Routes>
 				</ThemeProvider>
