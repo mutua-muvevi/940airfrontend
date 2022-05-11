@@ -15,7 +15,7 @@ const sx= {
 export const listItemsTop = [
 	{
 		label: "Dashboard",
-		path: "/sender/home",
+		path: "/admin/sender/home",
 		icon: <HomeIcon sx={sx}/>,
 		nested: [
 			{}
@@ -23,7 +23,7 @@ export const listItemsTop = [
 	},
 	{
 		label: "Tracking",
-		path: "/sender/tracking",
+		path: "/admin/sender/tracking",
 		icon: <MapIcon sx={sx}/>,
 		nested: [
 			{}
@@ -31,7 +31,7 @@ export const listItemsTop = [
 	},
 	{
 		label: "History",
-		path: "/sender/analitics",
+		path: "/admin/sender/analitics",
 		icon: <AccessTimeIcon sx={sx}/>,
 		nested: [
 			{}
@@ -39,7 +39,7 @@ export const listItemsTop = [
 	},
 	{
 		label: "Order",
-		path: "/sender/order",
+		path: "/admin/sender/order",
 		icon:  <ArticleIcon sx={sx}/>,
 		nested: [
 			{}
@@ -50,7 +50,7 @@ export const listItemsTop = [
 export const listItemsBottom = [
 	{
 		label: "Profile",
-		path: "/sender/profile",
+		path: "/admin/sender/profile",
 		icon:  <SettingsIcon sx={sx}/>,
 		nested: [
 			{}
