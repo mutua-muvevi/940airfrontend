@@ -14,7 +14,7 @@ import TextFieldWrapper from "../../../../components/formui/textfield";
 const ProfileEditForm = () => {
 	return (
 		<Box>
-
+			Profile edit form
 		</Box>
 	)
 }
