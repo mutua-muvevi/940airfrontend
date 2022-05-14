@@ -136,19 +136,6 @@ export const profileEditFormContent = [
 		lg:12,
 		xl:12,
 		multiline: true,
-		rows: 0
-	},
-	// {
-	// 	type: "text",
-	// 	label: "usertype",
-	// 	required: true,
-	// 	name:"usertype",
-	// 	xs:12,
-	// 	sm:12,
-	// 	md:4,
-	// 	lg:4,
-	// 	xl:4,
-	// 	multiline: false,
-	// 	rows: 0
-	// },
+		rows: 4
+	}
 ]
