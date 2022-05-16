@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types"
 
-import { Box, Container, Divider, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Container, Tab, Tabs, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import ProfileEditForm from "./profileeditform";
@@ -16,14 +16,6 @@ const StyledProfileCard = styled(Box)(({ theme }) => ({
 	marginTop: "-15vh",
 	filter: "drop-shadow(1px 4px 10px rgba(0, 0, 0, 0.58))"
 }));
-
-const StyledProfileCardTop = styled(Box)(({ theme }) => ({
-	height: "7vh",
-	display: "flex",
-	justifyContent: "left",
-	textAlign: "left",
-	alignItems: "center"
-}))
 
 
 function TabPanel(props) {
@@ -64,7 +56,6 @@ const ProfileRight = () => {
 
 	const [ value, setValue ] = useState(0)
 
-	
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
@@ -73,10 +64,12 @@ const ProfileRight = () => {
 		<StyledProfileCard>
 			<Box sx={{ width: '100%' }}>
 				<Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-					<Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-						<Tab label="User info" {...a11yProps(0)} />
-						<Tab label="Edit profile" {...a11yProps(1)} />
-					</Tabs>
+					<Container>
+						<Tabs value={value} onChange={handleChange} aria-label="user profile tab">
+							<Tab label="User info" {...a11yProps(0)} />
+							<Tab label="Edit profile" {...a11yProps(1)} />
+						</Tabs>
+					</Container>
 				</Box>
 				<TabPanel value={value} index={0}>
 					<ProfileInfo/>
