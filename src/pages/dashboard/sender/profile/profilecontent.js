@@ -114,9 +114,9 @@ export const profileEditFormContent = [
 	},
 	{
 		type: "text",
-		label: "Caption",
+		label: "Role",
 		required: true,
-		name:"caption",
+		name:"role",
 		xs:12,
 		sm:12,
 		md:6,

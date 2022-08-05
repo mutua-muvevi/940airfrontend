@@ -95,10 +95,10 @@ const ProfileInfo = () => {
 								<Typography variant="body1" style={{textTransform: "capitalize", fontWeight: "bold"}}>
 									{el.label}
 								</Typography>
-								<Box>
 									<Typography variant="body2">
 										{el.value}
 									</Typography>
+								<Box>
 								</Box>
 							</Container>
 						</StyledGridItem>

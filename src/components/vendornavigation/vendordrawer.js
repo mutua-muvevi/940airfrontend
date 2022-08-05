@@ -7,10 +7,9 @@ import { styled } from "@mui/system";
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { listItemsBottom, listItemsTop } from "./vendordrawerlist";
 
-import { listItemsBottom, listItemsTop } from "./senderdrawerlist";
 import Logo from "../../assets/images/logos/940 air cargo logo.png"
-
 
 const drawerWidth = "18vw";
 
@@ -91,7 +90,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 		}),
   );
 
-const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => {
+const VendorDrawer = ({open, handleDrawerOpen, handleDrawerClose, theme}) => {
 	return (
 		<Drawer
 			anchor="left"
@@ -171,4 +170,4 @@ const DrawerComponent = ({open, handleDrawerOpen, handleDrawerClose, theme}) => 
 	)
 }
 
-export default DrawerComponent
+export default VendorDrawer
