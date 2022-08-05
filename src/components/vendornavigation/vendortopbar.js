@@ -83,7 +83,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-export default function PrimarySearchAppBar({ handleDrawerOpen, open }) {
+export default function VendorTopBar({ handleDrawerOpen, open }) {
 
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);

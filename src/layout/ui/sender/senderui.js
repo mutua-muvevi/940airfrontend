@@ -29,18 +29,18 @@ const SenderUI = () => {
 	
 	const theme = useTheme();
 	const [open, setOpen] = useState(true);
-  
+
 	const handleDrawerOpen = () => {
 	  setOpen(true);
 	};
-  
+	
 	const handleDrawerClose = () => {
 	  setOpen(false);
 	};
 
 
 	return (
-		<Fade  in timeout={1000}>
+		<Fade in timeout={1000}>
 			<Box sx={{ display: 'flex' }}>
 				<CssBaseline />
 				<SenderDrawer handleDrawerOpen={handleDrawerOpen} open={open} theme={theme} handleDrawerClose={handleDrawerClose}/>
